@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Page | Linoa</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Noto+Sans+TC:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="account.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header class="account-header">
+        <a href="index.html" class="account-logo">Linoa</a>
+
+        <nav class="mypage-nav">
+            <a href="index.html">首頁</a>
+            <a href="index.html#service">服務項目</a>
+            <span id="headerUser">會員中心</span>
+        </nav>
+    </header>
+
+
+    <!-- Main -->
+
+    <main class="mypage-container">
+
+        <!-- Page Heading -->
+
+        <div class="mypage-heading">
+            <p class="account-subtitle">MY ACCOUNT</p>
+            <h1>會員中心</h1>
+            <p>歡迎回到 Linoa，享受您的專屬美麗時光。</p>
+        </div>
+
+
+        <div class="mypage-layout">
+
+            <!-- Sidebar -->
+
+            <aside class="mypage-sidebar">
+
+                <div class="member-profile">
+                    <div class="member-avatar">L</div>
+                    <h3 id="sidebarName">會員您好</h3>
+                    <p>Welcome to Linoa</p>
+                </div>
+
+                <button class="side-menu active" data-page="reservationPage">
+                    <span>01</span>
+                    預約紀錄
+                </button>
+
+                <button class="side-menu" data-page="profilePage">
+                    <span>02</span>
+                    個人資料修改
+                </button>
+
+                <button class="side-menu logout-menu" id="logoutButton">
+                    <span>03</span>
+                    登出系統
+                </button>
+
+            </aside>
+
+
+            <!-- Content Area -->
+
+            <section class="mypage-content">
+
+
+                <!-- Reservation Page -->
+
+                <div class="content-page active" id="reservationPage">
+
+                    <div class="content-title">
+                        <div>
+                            <p class="account-subtitle">RESERVATION</p>
+                            <h2>預約紀錄</h2>
+                        </div>
+                    </div>
+
+
+                    <!-- Current Reservation -->
+
+                    <div class="reservation-section">
+
+                        <h3>詳細預約狀態</h3>
+
+                        <div class="reservation-card">
+
+                            <div class="reservation-top">
+                                <span class="reservation-status">
+                                    已確認
+                                </span>
+                                <span class="reservation-number">
+                                    No. LN20261101
+                                </span>
+                            </div>
+
+                            <h4>韓系層次剪髮＋漂髮兩次＋染髮</h4>
+
+                            <div class="reservation-info">
+
+                                <div>
+                                    <span>預約日期</span>
+                                    <strong>2026/11/20</strong>
+                                </div>
+
+                                <div>
+                                    <span>預約時間</span>
+                                    <strong>14:00</strong>
+                                </div>
+
+                                <div>
+                                    <span>設計師</span>
+                                    <strong>Designer Nana</strong>
+                                </div>
+
+                                <div>
+                                    <span>預估金額</span>
+                                    <strong>¥26,700</strong>
+                                </div>
+
+                            </div>
+
+                            <div class="reservation-actions">
+                                <button class="outline-button" id="cancelReservation">
+                                    取消預約
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Reservation History -->
+
+                    <div class="reservation-section history-section">
+
+                        <h3>預約歷史與變更</h3>
+
+                        <div class="history-card">
+
+                            <div>
+                                <strong>2026/10/15</strong>
+                                <p>臉周修飾剪髮</p>
+                                <span>Designer Nana</span>
+                            </div>
+
+                            <span class="history-completed">
+                                已完成
+                            </span>
+
+                        </div>
+
+                        <div class="history-card">
+
+                            <div>
+                                <strong>2026/09/20</strong>
+                                <p>臉周修飾剪髮＋雙劑染髮</p>
+                                <span>Designer Nana</span>
+                            </div>
+
+                            <span class="history-completed">
+                                已完成
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Profile Page -->
+
+                <div class="content-page" id="profilePage">
+
+                    <div class="content-title">
+                        <div>
+                            <p class="account-subtitle">PERSONAL INFORMATION</p>
+                            <h2>個人資料修改</h2>
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+
+                        <form id="profileForm">
+
+                            <div class="form-group">
+                                <label for="profileName">姓名</label>
+                                <input type="text" id="profileName" placeholder="請輸入姓名" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="profileEmail">電子郵件</label>
+                                <input type="email" id="profileEmail" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="profilePhone">電話號碼</label>
+                                <input type="tel" id="profilePhone" placeholder="請輸入電話號碼">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="profileBirthday">生日</label>
+                                <input type="date" id="profileBirthday">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="profileGender">性別</label>
+                                <select id="profileGender">
+                                    <option value="">請選擇</option>
+                                    <option value="女性">女性</option>
+                                    <option value="男性">男性</option>
+                                    <option value="其他">其他</option>
+                                    <option value="不願透露">不願透露</option>
+                                </select>
+                            </div>
+
+                            <p id="profileMessage" class="profile-message"></p>
+
+                            <button type="submit" class="account-button">
+                                儲存資料
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <footer class="account-footer">
+        Linoa — Your time, Your beauty.
+        <p>© 2026 Linoa Hair Salon. All Rights Reserved.</p>
+    </footer>
+
+
+    <script src="mypage.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Linoa</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Noto+Sans+TC:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="account.css">
+</head>
+
+<body>
+
+    <header class="account-header">
+        <a href="index.html" class="account-logo">Linoa</a>
+        <a href="index.html" class="back-home">Back to Home</a>
+    </header>
+
+    <main class="login-container">
+
+        <div class="login-card">
+
+            <p class="account-subtitle">WELCOME TO LINOA</p>
+            <h1>會員登入</h1>
+            <p class="login-description">
+                登入會員中心，管理您的預約與個人資料。
+            </p>
+
+            <form id="loginForm">
+
+                <div class="form-group">
+                    <label for="email">電子郵件</label>
+                    <input type="email" id="email" placeholder="請輸入電子郵件" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">密碼</label>
+                    <input type="password" id="password" placeholder="請輸入密碼" required>
+                </div>
+
+                <div class="login-options">
+                    <label class="remember-label">
+                        <input type="checkbox" id="remember">
+                        記住我
+                    </label>
+
+                    <a href="#" id="forgotPassword">忘記密碼？</a>
+                </div>
+
+                <p id="loginMessage" class="login-message"></p>
+
+                <button type="submit" class="account-button">
+                    登入
+                </button>
+
+            </form>
+
+            <div class="login-divider">
+                <span>還不是會員嗎？</span>
+            </div>
+
+            <a href="register.html" class="register-link">
+                註冊新會員
+            </a>
+
+        </div>
+
+    </main>
+
+    <footer class="account-footer">
+        Linoa — Your time, Your beauty.
+        <p>© 2026 Linoa Hair Salon.</p>
+    </footer>
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>

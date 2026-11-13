@@ -1,0 +1,905 @@
+/* ==================================
+   LINOA HAIR SALON
+   Main Style Sheet
+================================== */
+
+/* 1. Basic Settings */
+
+:root {
+    --ivory: #f5eee3;
+    --navy: #202432;
+    --blue: #536787;
+    --gray: #99969a;
+    --white: #ffffff;
+    --light-bg: #f4f6f9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    margin: 0;
+    font-family: "Noto Sans TC", sans-serif;
+    color: var(--navy);
+    background: var(--light-bg);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* 2. Header */
+
+.header {
+    width: 100%;
+    height: 104px;
+    background: var(--ivory);
+    border-bottom: 1px solid var(--blue);
+    position: relative;
+    z-index: 100;
+}
+
+.header-inner {
+    height: 100%;
+    padding: 0 4.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: "Dancing Script", cursive;
+    font-size: 43px;
+    font-weight: 700;
+    color: var(--navy);
+}
+
+.logo:hover {
+    color: var(--blue);
+}
+
+
+/* Navigation */
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+}
+
+.navigation .nav-link {
+    color: var(--blue);
+    font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: 0.2s;
+}
+
+.navigation .nav-link:hover {
+    color: var(--navy);
+}
+
+.navigation .nav-link.active {
+    color: var(--navy);
+    font-weight: 700;
+}
+
+.nav-divider {
+    color: #a8a8a8;
+    margin-left: -14px;
+    margin-right: -25px;
+}
+
+.navigation .mypage {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.login-button {
+    background: var(--blue);
+    color: white;
+    padding: 10px 24px;
+    border-radius: 4px;
+    box-shadow: 3px 4px 5px #00000040;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.login-button:hover {
+    background: var(--navy);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    color: var(--navy);
+    cursor: pointer;
+}
+
+
+/* 3. Hero Section */
+
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 768px;
+    background: var(--ivory);
+    padding-top: 80px;
+    padding-bottom: 75px;
+}
+
+.hero-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 49.5% 50.5%;
+    align-items: center;
+    min-height: 680px;
+}
+
+
+/* Left Content */
+
+.hero-content {
+    padding: 0 5.5% 30px 6%;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: clamp(29px, 3.15vw, 46px);
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    color: #202432;
+    white-space: nowrap;
+    margin-bottom: 16px;
+}
+
+.hero-description {
+    color: var(--gray);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.72;
+    margin-bottom: 3px;
+}
+
+.english-message {
+    color: var(--gray);
+    font-size: 16px;
+    margin-top: 2px;
+}
+
+
+/* Buttons */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+    margin-top: 40px;
+}
+
+.primary-button {
+    min-width: 158px;
+    padding: 11px 25px;
+    background: white;
+    color: var(--navy);
+    border-radius: 5px;
+    font-weight: 700;
+    box-shadow: 3px 4px 5px #00000030;
+    transition: 0.3s;
+}
+
+.primary-button:hover {
+    background: var(--blue);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.text-button {
+    color: var(--navy);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.text-button:hover {
+    color: var(--blue);
+}
+
+
+/* 4. Hero Image */
+
+.hero-image {
+    width: 100%;
+    height: 765px;
+    overflow: hidden;
+    border-radius: 72px 72px 72px 0;
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.6s ease;
+}
+
+.hero-image:hover img {
+    transform: scale(1.025);
+}
+
+
+/* 5. Price Calculator */
+
+.price-card {
+    position: absolute;
+    z-index: 10;
+
+    width: 51.5%;
+    min-height: 140px;
+
+    left: 44.5%;
+    bottom: -77px;
+
+    padding: 22px 50px 20px;
+
+    background: #ffffff;
+    border-radius: 12px;
+
+    box-shadow: 0 5px 7px #00000030;
+}
+
+.price-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+.price-circle {
+    width: 17px;
+    height: 17px;
+    border: 5px solid #c9c9c9;
+    border-radius: 50%;
+}
+
+.price-form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 120px;
+    align-items: center;
+    gap: 0;
+}
+
+.price-item {
+    min-width: 0;
+    padding: 0 23px;
+    border-right: 1px solid var(--blue);
+}
+
+.price-item:first-child {
+    padding-left: 0;
+}
+
+.price-item:nth-child(3) {
+    border-right: none;
+}
+
+.price-item label {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.price-item select {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #333;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 3px 0;
+}
+
+.search-button {
+    margin-left: 22px;
+    min-height: 47px;
+    border: none;
+    border-radius: 5px;
+    background: #f5f5f5;
+    color: var(--navy);
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 3px 4px 5px #00000030;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    color: white;
+    background: var(--blue);
+}
+
+.price-result {
+    margin: 14px 0 0;
+    color: var(--blue);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* 6. Additional Sections */
+
+.extra-section {
+    padding: 110px 20px 80px;
+    text-align: center;
+    background: var(--light-bg);
+}
+
+.extra-section h2 {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.extra-section p {
+    color: var(--gray);
+}
+
+.extra-section .section-subtitle {
+    color: var(--blue);
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.service-section {
+    background: white;
+}
+
+
+/* 7. Footer */
+
+.footer {
+    padding: 45px 20px;
+    text-align: center;
+    background: var(--ivory);
+    border-top: 1px solid #d8d0c5;
+}
+
+.footer-logo {
+    font-family: "Dancing Script", cursive;
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--navy);
+}
+
+.footer p {
+    color: var(--gray);
+    font-size: 13px;
+    margin: 8px 0;
+}
+
+
+/* 8. Tablet */
+
+@media (max-width: 1100px) {
+
+    .navigation {
+        gap: 20px;
+    }
+
+    .hero-content {
+        padding: 0 25px;
+    }
+
+    .hero-content h1 {
+        white-space: normal;
+        font-size: 32px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-image {
+        height: 650px;
+    }
+
+    .price-card {
+        width: 65%;
+        left: 32%;
+        padding: 20px 25px;
+    }
+
+    .price-form {
+        grid-template-columns: repeat(3, 1fr) 100px;
+    }
+
+    .price-item {
+        padding: 0 12px;
+    }
+
+    .search-button {
+        margin-left: 12px;
+    }
+}
+
+
+/* 9. Mobile */
+
+@media (max-width: 768px) {
+
+    .header {
+        height: 75px;
+    }
+
+    .header-inner {
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 36px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background: var(--ivory);
+        border-bottom: 1px solid var(--blue);
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .navigation.show {
+        display: flex;
+    }
+
+    .nav-divider {
+        display: none;
+    }
+
+    .hero {
+        padding-top: 35px;
+        padding-bottom: 50px;
+        min-height: auto;
+    }
+
+    .hero-container {
+        display: flex;
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .hero-content {
+        order: 1;
+        width: 100%;
+        padding: 15px 22px 35px;
+    }
+
+    .hero-content h1 {
+        font-size: 27px;
+        white-space: normal;
+        margin-bottom: 20px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+        line-height: 2;
+    }
+
+    .english-message {
+        font-size: 13px;
+    }
+
+    .hero-buttons {
+        margin-top: 25px;
+        gap: 35px;
+    }
+
+    .hero-image {
+        order: 2;
+        width: 92%;
+        height: 420px;
+        border-radius: 45px 45px 45px 0;
+    }
+
+    .price-card {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        width: 90%;
+        margin: -35px auto 0;
+        padding: 25px 22px;
+    }
+
+    .price-form {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+    }
+
+    .price-item {
+        padding: 0;
+        border-right: none;
+        border-bottom: 1px solid #dddddd;
+        padding-bottom: 12px;
+    }
+
+    .price-item select {
+        font-size: 14px;
+    }
+
+    .search-button {
+        margin: 0;
+        width: 100%;
+    }
+
+    .extra-section {
+        padding: 70px 20px;
+    }
+}
+
+
+/* 10. Small Mobile */
+
+@media (max-width: 400px) {
+
+    .hero-content h1 {
+        font-size: 23px;
+    }
+
+    .hero-image {
+        height: 330px;
+    }
+
+    .primary-button {
+        min-width: 130px;
+    }
+
+    .hero-buttons {
+        gap: 25px;
+    }
+
+}
+
+/* ==================================
+   SERVICE MENU SECTION
+================================== */
+
+.service-menu {
+    background: #f7f8fb;
+    padding: 90px 5% 70px;
+    min-height: 800px;
+    color: #202432;
+}
+
+/* Title */
+
+.service-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.service-heading h2 {
+    color: #536b8d;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.service-heading p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #202432;
+}
+
+
+/* Category Tabs */
+
+.service-tabs {
+    max-width: 865px;
+    margin: 25px auto 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 1px solid #a9b8ce;
+}
+
+.tab-button {
+    border: none;
+    background: transparent;
+    color: #85858e;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0 10px 15px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+}
+
+.tab-button:hover {
+    color: #202432;
+}
+
+.tab-button.active {
+    color: #202432;
+    font-weight: 700;
+}
+
+.tab-button.active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #202432;
+    bottom: -2px;
+    left: 0;
+}
+
+
+/* Hair Grid */
+
+.hair-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 28px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+/* Hair Card */
+
+.hair-card {
+    background: #f9eee2;
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 0;
+    transition: 0.3s;
+}
+
+.hair-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px #00000012;
+}
+
+.hair-card-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.hair-card-title h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.favorite {
+    border: none;
+    background: transparent;
+    color: #202432;
+    font-size: 27px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+    transition: 0.2s;
+    flex-shrink: 0;
+}
+
+.favorite:hover {
+    transform: scale(1.15);
+}
+
+.favorite.liked {
+    color: #d46b79;
+}
+
+
+/* Hair Images */
+
+.hair-card img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 17px;
+}
+
+
+/* Price and Booking */
+
+.hair-card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.hair-card-bottom strong {
+    font-size: 18px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.booking-button {
+    display: inline-block;
+    background: white;
+    color: #202432;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 18px;
+    border-radius: 4px;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.booking-button:hover {
+    background: #536b8d;
+    color: white;
+}
+
+
+/* Show More */
+
+.show-more-area {
+    max-width: 1400px;
+    margin: 55px auto 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.show-more-button {
+    background: white;
+    color: #536b8d;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.show-more-button:hover {
+    background: #536b8d;
+    color: white;
+}
+
+.hair-count {
+    position: absolute;
+    right: 5px;
+    font-size: 12px;
+    color: #202432;
+}
+
+
+/* Hidden Cards */
+
+.hair-card.hidden-card {
+    display: none;
+}
+
+
+/* ==================================
+   RESPONSIVE DESIGN
+================================== */
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+
+    .hair-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .hair-card img {
+        height: 230px;
+    }
+
+    .service-menu {
+        padding: 70px 4%;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 576px) {
+
+    .service-menu {
+        padding: 55px 18px;
+    }
+
+    .service-heading h2 {
+        font-size: 30px;
+    }
+
+    .service-heading p {
+        font-size: 13px;
+    }
+
+    .service-tabs {
+        margin-bottom: 25px;
+    }
+
+    .tab-button {
+        font-size: 16px;
+    }
+
+    .hair-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .hair-card {
+        padding: 11px;
+    }
+
+    .hair-card-title h3 {
+        font-size: 13px;
+    }
+
+    .favorite {
+        font-size: 22px;
+    }
+
+    .hair-card img {
+        height: 145px;
+    }
+
+    .hair-card-bottom {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hair-card-bottom strong {
+        font-size: 15px;
+    }
+
+    .booking-button {
+        text-align: center;
+        font-size: 12px;
+        padding: 9px 5px;
+    }
+
+    .hair-count {
+        position: static;
+        margin-left: 12px;
+    }
+
+    .show-more-area {
+        flex-wrap: wrap;
+    }
+}

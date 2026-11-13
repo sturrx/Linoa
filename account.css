@@ -1,0 +1,570 @@
+/* ==================================
+   LINOA ACCOUNT DESIGN
+================================== */
+
+:root {
+    --ivory: #f5eee3;
+    --navy: #202432;
+    --blue: #536b8d;
+    --beige: #f9eee2;
+    --gray: #99969a;
+    --light-bg: #f7f8fb;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Noto Sans TC", sans-serif;
+    color: var(--navy);
+    background: var(--light-bg);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Header */
+
+.account-header {
+    height: 95px;
+    padding: 0 5%;
+    background: var(--ivory);
+    border-bottom: 1px solid var(--blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.account-logo {
+    font-family: "Dancing Script", cursive;
+    font-size: 43px;
+    font-weight: 700;
+    color: var(--navy);
+}
+
+.back-home,
+.mypage-nav a,
+.mypage-nav span {
+    color: var(--blue);
+    font-size: 14px;
+}
+
+.mypage-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+/* Common */
+
+.account-subtitle {
+    color: var(--blue);
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.account-footer {
+    padding: 35px 15px;
+    text-align: center;
+    background: var(--ivory);
+    color: var(--gray);
+    font-size: 13px;
+}
+
+.account-footer p {
+    margin: 8px 0 0;
+}
+
+
+/* ==================================
+   LOGIN PAGE
+================================== */
+
+.login-container {
+    min-height: calc(100vh - 175px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background: var(--light-bg);
+}
+
+.login-card {
+    width: 100%;
+    max-width: 470px;
+    background: white;
+    padding: 48px 45px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px #0000000c;
+}
+
+.login-card h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.login-description {
+    font-size: 13px;
+    color: var(--gray);
+    margin-bottom: 35px;
+    line-height: 1.8;
+}
+
+.form-group {
+    margin-bottom: 23px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 9px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    height: 47px;
+    padding: 0 14px;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    background: white;
+    color: var(--navy);
+    outline: none;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px #536b8d15;
+}
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    margin: 10px 0 22px;
+}
+
+.remember-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.login-options a {
+    color: var(--blue);
+}
+
+.account-button {
+    width: 100%;
+    min-height: 48px;
+    border: none;
+    border-radius: 5px;
+    background: var(--blue);
+    color: white;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.account-button:hover {
+    background: var(--navy);
+}
+
+.login-divider {
+    text-align: center;
+    margin: 28px 0 18px;
+    color: var(--gray);
+    font-size: 13px;
+}
+
+.register-link {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    border: 1px solid var(--blue);
+    border-radius: 5px;
+    color: var(--blue);
+    font-size: 14px;
+}
+
+.register-link:hover {
+    background: var(--blue);
+    color: white;
+}
+
+.login-message,
+.profile-message {
+    font-size: 13px;
+    color: #c45d5d;
+    margin-bottom: 12px;
+}
+
+
+/* ==================================
+   MY PAGE
+================================== */
+
+.mypage-container {
+    max-width: 1250px;
+    margin: auto;
+    padding: 65px 30px 90px;
+}
+
+.mypage-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.mypage-heading h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--blue);
+    margin: 10px 0;
+}
+
+.mypage-heading p:last-child {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+
+/* Layout */
+
+.mypage-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 35px;
+    align-items: start;
+}
+
+
+/* Sidebar */
+
+.mypage-sidebar {
+    background: white;
+    padding: 25px 18px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px #00000008;
+}
+
+.member-profile {
+    text-align: center;
+    padding: 10px 5px 28px;
+    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 18px;
+}
+
+.member-avatar {
+    width: 65px;
+    height: 65px;
+    margin: auto auto 12px;
+    border-radius: 50%;
+    background: var(--ivory);
+    color: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Dancing Script", cursive;
+    font-size: 35px;
+}
+
+.member-profile h3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.member-profile p {
+    font-size: 12px;
+    color: var(--gray);
+}
+
+.side-menu {
+    width: 100%;
+    padding: 16px 12px;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 5px;
+    background: transparent;
+    color: var(--navy);
+    text-align: left;
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.side-menu span {
+    color: var(--blue);
+    margin-right: 12px;
+    font-size: 12px;
+}
+
+.side-menu:hover,
+.side-menu.active {
+    background: var(--ivory);
+    color: var(--blue);
+    font-weight: 700;
+}
+
+.logout-menu {
+    color: #b65e5e;
+}
+
+.logout-menu span {
+    color: #b65e5e;
+}
+
+
+/* Content */
+
+.mypage-content {
+    min-width: 0;
+    background: white;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px #00000008;
+    min-height: 550px;
+}
+
+.content-page {
+    display: none;
+}
+
+.content-page.active {
+    display: block;
+}
+
+.content-title {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 30px;
+}
+
+.content-title h2 {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0;
+}
+
+
+/* Reservation */
+
+.reservation-section {
+    margin-bottom: 38px;
+}
+
+.reservation-section h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.reservation-card {
+    padding: 25px;
+    background: var(--beige);
+    border-radius: 8px;
+}
+
+.reservation-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+    gap: 10px;
+}
+
+.reservation-status {
+    padding: 5px 13px;
+    border-radius: 20px;
+    background: #dcebd8;
+    color: #4f7950;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.reservation-number {
+    color: var(--gray);
+    font-size: 12px;
+}
+
+.reservation-card h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.reservation-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.reservation-info div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.reservation-info span {
+    color: var(--gray);
+    font-size: 12px;
+}
+
+.reservation-info strong {
+    font-size: 14px;
+}
+
+.reservation-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+}
+
+.outline-button {
+    border: 1px solid #b76a6a;
+    background: white;
+    color: #b76a6a;
+    padding: 9px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.outline-button:hover {
+    background: #b76a6a;
+    color: white;
+}
+
+
+/* History */
+
+.history-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid #eeeeee;
+    border-radius: 7px;
+    margin-bottom: 12px;
+}
+
+.history-card strong {
+    font-size: 13px;
+}
+
+.history-card p {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+.history-card span {
+    font-size: 12px;
+    color: var(--gray);
+}
+
+.history-completed {
+    color: #628765 !important;
+    background: #e4f0e1;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+
+/* Profile */
+
+.profile-card {
+    max-width: 600px;
+}
+
+.profile-card .form-group {
+    margin-bottom: 22px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .account-header {
+        height: 75px;
+        padding: 0 20px;
+    }
+
+    .account-logo {
+        font-size: 36px;
+    }
+
+    .mypage-nav {
+        gap: 12px;
+    }
+
+    .mypage-nav a {
+        display: none;
+    }
+
+    .mypage-container {
+        padding: 45px 16px;
+    }
+
+    .mypage-heading h1 {
+        font-size: 29px;
+    }
+
+    .mypage-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .mypage-sidebar {
+        padding: 15px;
+    }
+
+    .member-profile {
+        padding-bottom: 15px;
+    }
+
+    .mypage-content {
+        padding: 22px 16px;
+    }
+
+    .reservation-card {
+        padding: 18px;
+    }
+
+    .reservation-info {
+        gap: 18px 10px;
+    }
+
+    .content-title h2 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .login-card {
+        padding: 35px 22px;
+    }
+
+    .reservation-info strong {
+        font-size: 12px;
+    }
+
+    .reservation-number {
+        font-size: 10px;
+    }
+}
